@@ -27,7 +27,7 @@ public class DbFunctions {
 	
 	public void readExpired(boolean param)
 	{
-		
+		//this query should return all firefighters that have expired certifications.
 		String query = "SELECT * FROM FireFighters WHERE ";
 		
 		//PreparedStatement ps = connection.PreparedStatement(query);
