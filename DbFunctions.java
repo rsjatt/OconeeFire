@@ -1,36 +1,44 @@
-package pojos;
+package dbhelp;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+//class for accessing db (methods will each access different things in database)
 public class DbFunctions {
-	//class for accessing db
 	
-	public DbFunctions(String dbname, String dbhost, String pass) 
+	private Connection conn;
+	
+	public DbFunctions() 
+		
 	{
-		//connect to DB (should be 
-		try {
-			Connection conn = DriverManager.getConnection("jdbc://mysql://localhost/Oconee", dbhost, pass);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+		conn = DbConnect.connectDb();
+		try 
+		{
+			System.out.println(conn.getSchema());
+		}
+		catch(SQLException e) 
+		{
+			//do something here if there is an SQLexception caught.
+			//in this case, print hello and the stack trace.
+			//hello is there to 
+			System.out.println("Hello");
 			e.printStackTrace();
 		}
-		
 	}
 	
-	public void readAllFireFighters() 
+	public void getAllFireFighters() 
 	{
 		String query = "SELECT * FROM Firefighters";
 	}
 	
-	public void readExpired(boolean param)
+	public void getExpiredFireFighters()
 	{
-		//this query should return all firefighters that have expired certifications.
-		String query = "SELECT * FROM FireFighters WHERE ";
 		
-		//PreparedStatement ps = connection.PreparedStatement(query);
+		String query = "SELECT * FROM FireFighters WHERE  IsExpired = ?";
+		
+		PreparedStatement ps = conn.PreparedStatement(query);
 	
 	}
 
