@@ -1,0 +1,65 @@
+h1{color:red;}
+
+body{
+	background-color: white;
+	color:black;
+}
+
+#teamInfo{
+	position:relative;
+	float:center;
+	text-align:center;
+}
+
+.teamLabel{
+	font-weight:bold;
+	font-size:1.2em;
+	text-align:center;
+}
+
+#orgInfo{
+	
+}
+
+.orgLabel{
+	font-weight:bold;
+	font-size:1.2em;
+	text-align:center;
+}
+
+#webInfo{
+	
+}
+#web{
+	margin-left:20px;
+	margin-right:20px;
+	
+	
+}
+
+.webLabel{
+	font-weight:bold;
+	font-size:1.2em;
+	text-align:center;
+}
+
+#line>p{
+	
+ 	position:relative;
+ 	text-align:center;
+ 	display:inline;
+ 	
+ }
+ 
+ #1{
+ 	position:relative;
+	display:inline;
+ 	text-align:center;
+ }
+ 
+ #lastLine >p{
+
+ 	position:relative;
+ 	text-align:center;
+
+ }
